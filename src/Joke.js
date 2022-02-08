@@ -11,21 +11,23 @@ class Joke extends Component {
     } 
 
     getEmoji(){
+        let className = '';
+
         if(this.state.votes < 0) {
-            return "sad";
+            className="fa-face-frown";
         } else if (this.state.votes < 3) {
-            return "neutral";
+            className="fa-face-meh";
         } else if (this.state.votes >= 3 && this.state.votes <= 6) {
-            return "smile";
+            className="fa-face-smile";
         } else if (this.state.votes > 6 && this.state.votes < 9) {
-            return "big-smile";
+            className="fa-face-grin";
         } else if (this.state.votes === 9) {
-            return "laughing";
+            className="fa-face-laugh";
         } else if (this.state.votes >= 10) {
-            return "rofl";
-        } else {
-            return "";
-        }
+            className="fa-face-grin-squint-tears";
+        } 
+
+        return <i className={`fa-solid ${className}`}></i>;
     }
 
     vote(type) {
@@ -43,9 +45,13 @@ class Joke extends Component {
         return (
             <div className="Joke">
                 <div className="Joke-voter">
-                    <div className="Joke-voter-up" onClick={voteUp}>^</div>
+                    <div className="Joke-voter-up" onClick={voteUp}>
+                        <i className="fa-regular fa-thumbs-up"></i>
+                    </div>
                     <div className="Joke-voter-score">{this.state.votes}</div>
-                    <div className="Joke-voter-down" onClick={voteDown}>v</div>
+                    <div className="Joke-voter-down" onClick={voteDown}>
+                        <i className="fa-regular fa-thumbs-down"></i>
+                    </div>
                 </div>
                 <div className="Joke-text">{this.props.data.joke}</div>
                 <div className="Joke-emoji">

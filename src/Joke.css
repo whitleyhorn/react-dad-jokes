@@ -2,7 +2,8 @@
     justify-content: space-evenly;     
     display: flex;     
     width: 797px;     
-    margin: 0 auto;
+    margin: 0 auto 30px;
+    border: 1px solid black;
 }
 
 .Joke-text {
@@ -13,4 +14,9 @@
     display:  flex;
     align-items:center;         
     justify-content:center;
+}
+
+.Joke-emoji i {
+    color: #ffbc00;
+    font-size: 42px;
 }
