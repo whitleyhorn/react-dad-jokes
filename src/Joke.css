@@ -1,0 +1,16 @@
+.Joke {
+    justify-content: space-evenly;     
+    display: flex;     
+    width: 797px;     
+    margin: 0 auto;
+}
+
+.Joke-text {
+    width: 500px;
+}
+
+.Joke-text, .Joke-emoji {
+    display:  flex;
+    align-items:center;         
+    justify-content:center;
+}

@@ -1,0 +1,24 @@
+/* Loading Spinner */
+#loading {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border: solid 5px #cfd0d1;   
+  border-top-color: #fff;
+  border-bottom-color: #1c87c9;
+  border-radius: 50%;
+  animation: spin 1s ease-in-out infinite;
+  -webkit-animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { -webkit-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+  to { -webkit-transform: rotate(360deg); }
+}
+
+/* Dad Jokes List */
+.DadJokes-list {
+    margin-top: 50px;
+}
